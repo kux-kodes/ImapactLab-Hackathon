@@ -4,12 +4,12 @@ const path = require('path'); // Import path module
 const app = express();
 const PORT = 3000;
 
-// Serve static files from the 'public' directory
+
 app.use(express.static('public'));
 
-// Serve index.html as the main page
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
 app.get('/fetchJobs', async (req, res) => {
